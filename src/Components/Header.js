@@ -3,10 +3,10 @@ import menu from "../images/icon-hamburger.svg";
 import close from "../images/icon-close.svg";
 
 export default function Header() {
-    const showHide = () => {
-        let closeMenu = document.querySelector(".close");
-        let openMenu = document.querySelector(".open");
-        let menu = document.querySelector(".pop");
+    const toggleMenu = () => {
+        let closeMenu = document.querySelector(".close"),
+        openMenu = document.querySelector(".open"),
+        menu = document.querySelector(".pop");
         openMenu.classList.toggle("hidden");
         closeMenu.classList.toggle("hidden");
         menu.classList.toggle("hidden");
@@ -26,9 +26,9 @@ export default function Header() {
                     <li className="w-2 h-2 rounded-full bg-gblue"></li>
                     <li className="link">LOGIN</li>
                 </ul>
-                <div className="">
-                    <img className="open cursor-pointer md:hidden" onClick={showHide} src={menu} alt="menu" />
-                    <img className="close hidden cursor-pointer" onClick={showHide} src={close} alt="close" />
+                <div className="md:hidden">
+                    <img className="open cursor-pointer md:hidden" onClick={toggleMenu} src={menu} alt="menu" />
+                    <img className="close hidden cursor-pointer" onClick={toggleMenu} src={close} alt="close" />
                 </div>
             </nav>
             </div>
@@ -38,7 +38,7 @@ export default function Header() {
         >
         </div>
         <div
-            className="pop hidden absolute max-w-full left-4 right-4 rounded-md shadow-xl bg-white z-10 p-4 text-center"
+            className="pop hidden md:hidden absolute max-w-full left-4 right-4 rounded-md shadow-xl bg-white z-10 p-4 text-center"
         >
             <ul className="flex flex-col gap-4">
                 <li className="link">PRODUCT</li>

@@ -7,9 +7,3 @@
 .link {
     @apply font-medium text-vdblue hover:font-bold hover:underline hover:cursor-pointer;
 }
-
-/* .hero-img {
-    background-image: url("../src/images/illustration-devices.svg");
-    background-size: 100%, 100%;
-    background-repeat: no-repeat;
-} */
